@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        //variables basicas
+        String accountNumber = "123456789";
+        double balance = 1500.75;
+        int pin = 1234;
+
+        //array de montos de transiccion
+        int[] transactionAmounts ={200, -100, 50};
+
+        //operaciones con variables
+        balance += transactionAmounts[0]; //deposito
+        if (balance > 0 && pin == 1234){
+            System.out.println("acceso concedido");
+
+            //uso de operadores
+            balance++; //incremento
+            String status =(balance<0)? "deuda" : "credito";
+            System.out.println("estado de cuenta" + status);
+        }
+    }
+}
